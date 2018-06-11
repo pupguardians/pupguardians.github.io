@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>PUP Guardians</title>
+    <title>Pure Pound Guardians</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -19,11 +19,28 @@
     <link href="css/one-page-wonder.min.css" rel="stylesheet">
   </head>
 
+  <style>
+    /* Map */
+    .map {
+        height: 500px;
+    }
+
+    @media(max-width:768px) {
+        .map {
+            height: 75%;
+        }
+    }
+
+    .map iframe {
+        pointer-events: none;
+    }
+  </style>
+
   <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="#">PUP Guardians</a>
+        <a class="navbar-brand" href="#">Pure Pound Guardians</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -33,13 +50,13 @@
               <a class="nav-link" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">About Us</a>
+              <a class="nav-link" href="#about">About Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">FAQ's</a>
+              <a class="nav-link" href="#faq">FAQ's</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contact Us</a>
+              <a class="nav-link" href="#contact">Contact Us</a>
             </li>
           </ul>
         </div>
@@ -49,7 +66,7 @@
     <header class="masthead text-center text-white">
       <div class="masthead-content">
         <div class="container">
-          <h1 class="masthead-heading mb-0">PUP Guardians</h1>
+          <h1 class="masthead-heading mb-0">Pure Pound Guardians</h1>
           <h2 class="masthead-subheading mb-0">The 5th Generation Cryptocurrency</h2>
           <a href="#" class="btn btn-primary btn-xl rounded-pill mt-5">Learn More</a>
         </div>
@@ -59,6 +76,84 @@
       <div class="bg-circle-3 bg-circle"></div>
       <div class="bg-circle-4 bg-circle"></div>
     </header>
+
+    <!-- About Us -->
+    <section id="about" style="background-color: #f4f4f4">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-12 order-lg-2">
+            <div class="p-5">
+              <h1 class="display-4">About Us</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 order-lg-2">
+            <div class="p-5">
+              <h3 class="display-4">Pure Pound (PUP)</h3>
+            </div>
+          </div>
+          <div class="col-lg-6 order-lg-1">
+            <div class="p-5">
+              <p>
+                Pure Pound (PUP) is the cryptocurrency for emerging markets. It prides itself as 
+                the medium of exchange for the 4th Industrial Revolution and the Internet of Things. 
+                As an advocate of data mining and agriculture, it is uniquely positioned as a tool for 
+                improving lives in the fastest growing region in the world. We envision SE Asia as the 
+                next center of economic and technological development in the world.
+              </p>
+              <p>
+                IT IS COMPLETE REDESIGNED FROM SCRATCH, USING CHTT ANCHORED ON THE POUND PROTOCOL 
+                AND USING CHA-1024 BIT HASHING, A MATHEMATICAL CRYPTOGRAPHIC ALGORITHM DEVELOPED SPECIFICALLY FOR PUP.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 order-lg-2">
+            <div class="p-5">
+              <h3 class="display-4">Innovative Payment Network</h3>
+            </div>
+          </div>
+          <div class="col-lg-6 order-lg-1">
+            <div class="p-5">
+              <p>
+                  Pure Pound is an innovative payment network. It is a new kind of monetary currency.
+                  Pure Pound uses peer-to-peer technology to operate with no central authority or 
+                  banks; managing transactions and the issuing of purepounds is carried out collectively 
+                  by the network. Pure Pound is open-source; its design is public, nobody owns or 
+                  controls Pure Pound and everyone can take part. Through many of its unique properties, 
+                  Pure Pound allows exciting uses that could not be covered by any previous payment system.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ's -->
+    <section id="faq" style="background-color: #f4f4f4">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-12 order-lg-2">
+            <div class="p-5">
+              <h1 class="display-4">Frequently Asked Questions</h1>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
 
     <section>
       <div class="container">
@@ -220,10 +315,50 @@
       </div>
     </section>
 
+    <!-- Contact Us -->
+    <section id="contact" style="background-color: #f4f4f4">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-12 order-lg-2">
+            <div class="p-5">
+              <h1 class="display-4">Contact Us</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Map -->
+		<section id="map" class="map">
+        <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+        <br/>
+        <script>
+          function initMap() {
+            var headoffice = {lat: 10.658411, lng: 122.954419};
+  
+            var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 9,
+            center: headoffice
+            });
+            
+            var marker = new google.maps.Marker({
+            position: headoffice,
+            map: map,
+            title: 'We are here!'
+            });
+          }
+        </script>
+      
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDdVjh918LZaf3FLEb-LEHuPcEzAiqK4XE&callback=initMap">
+        </script>
+      </section>
+
+
+
     <!-- Footer -->
     <footer class="py-5 bg-black">
       <div class="container">
-        <p class="m-0 text-center text-white small">Copyright &copy; PUP Guardians
+        <p class="m-0 text-center text-white small">Copyright &copy; Pure Pound Guardians
             <script type="text/javascript">
                 document.write(new Date().getFullYear());
             </script>
@@ -235,5 +370,85 @@
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- jQuery -->
+		<script src="js/jquery.js"></script>
+		<!-- Bootstrap Core JavaScript -->
+		<script src="js/bootstrap.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+		<script>
+        // Closes the sidebar menu
+        $("#menu-close").click(function(e) {
+          e.preventDefault();
+          $("#sidebar-wrapper").toggleClass("active");
+        });
+        // Opens the sidebar menu
+        $("#menu-toggle").click(function(e) {
+          e.preventDefault();
+          $("#sidebar-wrapper").toggleClass("active");
+        });
+        // Scrolls to the selected menu item on the page
+        $(function() {
+          $('a[href*=#]:not([href=#],[data-toggle],[data-target],[data-slide])').click(function() {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+              var target = $(this.hash);
+              target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+              if (target.length) {
+                $('html,body').animate({
+                  scrollTop: target.offset().top
+                }, 1000);
+                return false;
+              }
+            }
+          });
+        });
+        //#to-top button appears after scrolling
+        var fixed = false;
+        $(document).scroll(function() {
+          if ($(this).scrollTop() > 250) {
+            if (!fixed) {
+              fixed = true;
+              // $('#to-top').css({position:'fixed', display:'block'});
+              $('#to-top').show("slow", function() {
+                $('#to-top').css({
+                  position: 'fixed',
+                  display: 'block'
+                });
+              });
+            }
+          } else {
+            if (fixed) {
+              fixed = false;
+              $('#to-top').hide("slow", function() {
+                $('#to-top').css({
+                  display: 'none'
+                });
+              });
+            }
+          }
+        });
+        // Disable Google Maps scrolling
+        // See http://stackoverflow.com/a/25904582/1607849
+        // Disable scroll zooming and bind back the click event
+        var onMapMouseleaveHandler = function(event) {
+          var that = $(this);
+          that.on('click', onMapClickHandler);
+          that.off('mouseleave', onMapMouseleaveHandler);
+          that.find('iframe').css("pointer-events", "none");
+        }
+        var onMapClickHandler = function(event) {
+            var that = $(this);
+            // Disable the click handler until the user leaves the map area
+            that.off('click', onMapClickHandler);
+            // Enable scrolling zoom
+            that.find('iframe').css("pointer-events", "auto");
+            // Handle the mouse leave event
+            that.on('mouseleave', onMapMouseleaveHandler);
+          }
+          // Enable map zooming with mouse scroll when the user clicks the map
+        $('.map').on('click', onMapClickHandler);
+      </script>
+
   </body>
 </html>
